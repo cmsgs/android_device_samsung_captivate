@@ -90,9 +90,7 @@ BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p1
 #BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_MOUNT := /mnt/sdcard
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
-BOARD_SDEXT_DEVICE_MOUNT := /mnt/sdcard/external_sd
 #BOARD_USES_BMLUTILS := true
 #BOARD_CUSTOM_RECOVERY_KEYMAPPING := true
 TARGET_PREBUILT_KERNEL := device/samsung/captivate/kernel
