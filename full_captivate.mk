@@ -81,7 +81,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/captivate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/captivate/prebuilt/vold.fstab:system/etc/vold.fstab 
+    device/samsung/captivate/prebuilt/vold.conf:system/etc/vold.conf \
+    device/samsung/captivate/prebuilt/egl.cfg:system/lib/egl/egl.cfg
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -97,7 +98,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 
 PRODUCT_NAME := full_captivate
-PRODUCT_DEVICE := captivate
-PRODUCT_MODEL := SGH-I897
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := Samsung
+PRODUCT_DEVICE := SGH-I897
+PRODUCT_MODEL := SAMSUNG-SGH-I897
+PRODUCT_BRAND := Samsung
+PRODUCT_MANUFACTURER := samsung
