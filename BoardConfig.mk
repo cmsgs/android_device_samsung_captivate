@@ -97,4 +97,8 @@ BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p1
 #BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
-#BOARD_USES_BMLUTILS := true
+#build update-binary with BML instead of MTD
+BOARD_USES_BMLUTILS := true
+#build recovery without the extra commands for partitioning etc
+BOARD_HAS_SMALL_RECOVERY := true
+
