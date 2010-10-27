@@ -100,5 +100,5 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
 #build update-binary with BML instead of MTD
 BOARD_USES_BMLUTILS := true
 #build recovery without the extra commands for partitioning etc
-BOARD_HAS_SMALL_RECOVERY := true
+#BOARD_HAS_SMALL_RECOVERY := true
 
