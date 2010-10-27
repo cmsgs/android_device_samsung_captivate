@@ -24,7 +24,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/SGH-I897/BoardConfigVendor.mk
+-include vendor/samsung/captivate/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 #TARGET_NO_RECOVERY := true
