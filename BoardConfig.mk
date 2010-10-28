@@ -24,7 +24,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/SGH-I897/BoardConfigVendor.mk
+-include vendor/samsung/captivate/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 #TARGET_NO_RECOVERY := true
@@ -95,6 +95,6 @@ BOARD_CACHE_DEVICE := /dev/block/stl11
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p1
-#BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
-#BOARD_USES_BMLUTILS := true
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
+BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+BOARD_USES_BMLUTILS := true

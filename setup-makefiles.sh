@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=SGH-I897
+DEVICE=captivate
 
 mkdir -p ../../../vendor/samsung/$DEVICE
 
@@ -53,7 +53,7 @@ DEVICE_PACKAGE_OVERLAYS := vendor/samsung/__DEVICE__/overlay
 \$(call inherit-product, vendor/samsung/__DEVICE__/__DEVICE__-vendor-blobs.mk)
 EOF
 
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/SGH-I897/BoardConfigVendor.mk
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/captivate/BoardConfigVendor.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -74,8 +74,8 @@ BOARD_GPS_LIBRARIES := libgps libsecgps
 
 EOF
 
-mkdir -p ../../../vendor/samsung/SGH-I897/overlay/packages/apps/Launcher2/res/layout
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/SGH-I897/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
+mkdir -p ../../../vendor/samsung/captivate/overlay/packages/apps/Launcher2/res/layout
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/captivate/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
 

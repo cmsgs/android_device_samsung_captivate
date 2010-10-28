@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=SGH-I897
+DEVICE=captivate
 
 mkdir -p ../../../vendor/samsung/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd system/bin/mm-venc-omx-test system/bin/parse_radio_log system/etc/01_qcomm_omx.cfg system/etc/AdieHWCodecSetting.csv system/etc/AudioBTID.csv system/etc/firmware/bcm4329.hcd system/etc/firmware/default.acdb system/etc/firmware/default_att.acdb system/etc/firmware/default_france.acdb system/etc/firmware/fw_bcm4329_apsta.bin system/etc/firmware/fw_bcm4329.bin system/etc/firmware/yamato_pfp.fw system/etc/firmware/yamato_pm4.fw system/etc/vpimg system/lib/egl/libEGL_adreno200.so system/lib/egl/libGLESv1_CM_adreno200.so system/lib/egl/libGLESv2_adreno200.so system/lib/egl/libq3dtools_adreno200.so system/lib/libcamera.so system/lib/libgps.so system/lib/libgsl.so system/lib/libsamsung_acoustic.so system/lib/libsamsung_ril.so system/lib/liblvmxipc.so system/lib/libmm-omxcore.so system/lib/liboemcamera.so system/lib/libOmxCore.so system/lib/libOmxVdec.so system/lib/libOmxVidEnc.so system/lib/libopencorehw.so system/lib/libqcomm_omx.so system/lib/libstagefrighthw.so -d ../../../vendor/samsung/$DEVICE/proprietary
