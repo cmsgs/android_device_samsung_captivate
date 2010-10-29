@@ -84,8 +84,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/captivate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/captivate/prebuilt/vold.conf:system/etc/vold.conf \
-    device/samsung/captivate/prebuilt/egl.cfg:system/lib/egl/egl.cfg
+    device/samsung/captivate/prebuilt/vold.conf:system/etc/vold.conf 
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
