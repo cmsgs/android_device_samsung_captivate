@@ -15,8 +15,10 @@
 #
 
 #
-# This is the product configuration for a generic GSM passion,
-# not specialized for any geography.
+# This file is the build configuration for a full Android
+# build for captivate hardware. This cleanly combines a set of
+# device-specific aspects (drivers) with a device-agnostic
+# product configuration (apps).
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -33,12 +35,11 @@ $(call inherit-product-if-exists, vendor/samsung/captivate/captivate-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libargs=-d /dev/ttyS0 \
-
-PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
-    rild.libpath=/system/lib/libreference-ril.so \
-    rild.libargs=-d /dev/ttyS0 \
+    rild.libpath=/system/lib/libsec-ril.so \
+    rild.libargs=-d[SPACE]/dev/ttyS0 \
+    ro.ril.gprsclass=10 \
+    ro.ril.hsxpa=2 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
 
@@ -48,13 +49,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
 
-# Vibrant uses high-density artwork where available
+# Captivate uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/captivate/overlay
 
 # media profiles and capabilities spec
 $(call inherit-product, device/samsung/captivate/media_a1026.mk)
+
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/captivate/media_profiles.xml:system/etc/media_profiles.xml
@@ -84,23 +86,25 @@ PRODUCT_COPY_FILES += \
     device/samsung/captivate/prebuilt/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin  
 
 PRODUCT_COPY_FILES += \
-    device/samsung/captivate/prebuilt/vold.conf:system/etc/vold.conf 
+    device/samsung/captivate/prebuilt/vold.conf:system/etc/vold.conf \
+    device/samsung/captivate/prebuilt/egl.cfg:system/lib/egl/egl.cfg
 
-# Kernel
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/captivate/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# Kernel (Not yet)
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#LOCAL_KERNEL := device/samsung/captivate/kernel
+#else
+#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
 $(call inherit-product, build/target/product/full.mk)
 
-
 PRODUCT_NAME := full_captivate
-PRODUCT_DEVICE := SGH-I897
+#PRODUCT_DEVICE := SGH-I897
+PRODUCT_DEVICE := captivate
 PRODUCT_MODEL := SAMSUNG-SGH-I897
-PRODUCT_BRAND := Samsung
+PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+TARGET_IS_GALAXYS := true
