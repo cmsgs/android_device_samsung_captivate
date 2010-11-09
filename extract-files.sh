@@ -86,10 +86,7 @@ lib/libsensor_yamaha_test.so
 
 lib/libarccamera.so
 lib/libcamera.so
-lib/libcamera_client.so
 lib/libcamerafirmwarejni.so
-lib/libcamerafirmwarejniforuna.so
-lib/libcameraservice.so
 lib/libseccamera.so
 lib/libseccameraadaptor.so
 
@@ -160,7 +157,6 @@ firmware/CE147F02.bin
 firmware/CE147F03.bin
 
 bin/killmediaserver
-bin/logwrapper
 bin/notified_event
 bin/playlogos1
 bin/pvrsrvinit
@@ -175,8 +171,8 @@ lib/libsrv_um.so
 "
 
 for FILE in $FILES; do
-	cp /android_build/froyo-system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
-	#adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
+	#cp /android_build/froyo-system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
+	adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
 done
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/samsung/$DEVICE/$DEVICE-vendor-blobs.mk
@@ -280,10 +276,7 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libarccamera.so:system/lib/libarccamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamera.so:system/lib/libcamera.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejni.so:system/lib/libcamerafirmwarejni.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcamerafirmwarejniforuna.so:system/lib/libcamerafirmwarejniforuna.so \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccamera.so:system/lib/libseccamera.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libseccameraadaptor.so:system/lib/libseccameraadaptor.so
 
@@ -391,7 +384,6 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/killmediaserver:system/bin/killmediaserver \\
-    vendor/samsung/__DEVICE__/proprietary/bin/logwrapper:system/bin/logwrapper \\
     vendor/samsung/__DEVICE__/proprietary/bin/notified_event:system/bin/notified_event \\
     vendor/samsung/__DEVICE__/proprietary/bin/playlogos1:system/bin/playlogos1 \\
     vendor/samsung/__DEVICE__/proprietary/bin/pvrsrvinit:system/bin/pvrsrvinit \\
