@@ -141,8 +141,6 @@ lib/libtvouthdmi.so
 lib/libtvoutservice.so
 
 app/Superuser.apk
-bin/sqlite3
-lib/libsqlite.so
 xbin/busybox
 xbin/su
 
@@ -171,7 +169,6 @@ lib/libsrv_um.so
 "
 
 for FILE in $FILES; do
-	#cp /android_build/froyo-system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
 	adb pull system/$FILE ../../../vendor/samsung/$DEVICE/proprietary/$FILE
 done
 
@@ -351,8 +348,6 @@ PRODUCT_COPY_FILES += \\
 #
 PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/app/Superuser.apk:system/app/Superuser.apk \\
-    vendor/samsung/__DEVICE__/proprietary/bin/sqlite3:system/bin/sqlite3 \\
-    vendor/samsung/__DEVICE__/proprietary/lib/libsqlite.so:system/lib/libsqlite.so \\
     vendor/samsung/__DEVICE__/proprietary/xbin/busybox:system/xbin/busybox \\
     vendor/samsung/__DEVICE__/proprietary/xbin/su:system/xbin/su
 
