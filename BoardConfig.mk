@@ -98,3 +98,6 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_BMLUTILS := true
+
+# For mounting the external MMC
+BOARD_EMMC_DEVICE := /dev/block/mmcblk1p1
