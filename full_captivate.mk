@@ -48,6 +48,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
 
+# For mounting the external MMC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.phone_storage=1 \
+    ro.additionalmounts=/mnt/emmc
+
 # Vibrant uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
