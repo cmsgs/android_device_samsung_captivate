@@ -48,6 +48,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.startheapsize=8m \
     dalvik.vm.heapsize=48m
 
+# Prevents FCs.... for now
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1
+
 # For mounting the external MMC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.phone_storage=1 \
