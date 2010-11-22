@@ -140,10 +140,6 @@ lib/libtvoutfimc.so
 lib/libtvouthdmi.so
 lib/libtvoutservice.so
 
-app/Superuser.apk
-xbin/busybox
-xbin/su
-
 bin/immvibed
 
 bin/vold
@@ -342,14 +338,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/lib/libtvoutfimc.so:system/lib/libtvoutfimc.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libtvouthdmi.so:system/lib/libtvouthdmi.so \\
     vendor/samsung/__DEVICE__/proprietary/lib/libtvoutservice.so:system/lib/libtvoutservice.so
-
-#
-# Test/Utilities
-#
-PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/app/Superuser.apk:system/app/Superuser.apk \\
-    vendor/samsung/__DEVICE__/proprietary/xbin/busybox:system/xbin/busybox \\
-    vendor/samsung/__DEVICE__/proprietary/xbin/su:system/xbin/su
 
 #
 # Haptic Feedback
