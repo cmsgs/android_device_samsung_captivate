@@ -38,7 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240 \
     rild.libpath=/system/lib/libreference-ril.so \
-    rild.libargs=-d /dev/ttyS0 \
+    rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15
 
