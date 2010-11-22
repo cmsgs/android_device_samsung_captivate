@@ -56,7 +56,6 @@ lib/libwpa_client.so
 bin/btld
 bin/dbus-daemon
 bin/hciattach
-bin/npsmobex
 etc/jupiter.xml
 
 bin/dhcpcd
@@ -90,7 +89,6 @@ lib/libcamerafirmwarejni.so
 lib/libseccamera.so
 lib/libseccameraadaptor.so
 
-bin/drexe
 bin/rilclient-test
 bin/rild
 lib/libreference-ril.so
@@ -223,7 +221,6 @@ PRODUCT_COPY_FILES += \\
     vendor/samsung/__DEVICE__/proprietary/bin/btld:system/bin/btld \\
     vendor/samsung/__DEVICE__/proprietary/bin/dbus-daemon:system/bin/dbus-daemon \\
     vendor/samsung/__DEVICE__/proprietary/bin/hciattach:system/bin/hciattach \\
-    vendor/samsung/__DEVICE__/proprietary/bin/npsmobex:system/bin/npsmobex \\
     vendor/samsung/__DEVICE__/proprietary/etc/jupiter.xml:system/etc/jupiter.xml
 
 #
@@ -277,7 +274,6 @@ PRODUCT_COPY_FILES += \\
 # RIL
 #
 PRODUCT_COPY_FILES += \\
-    vendor/samsung/__DEVICE__/proprietary/bin/drexe:system/bin/drexe \\
     vendor/samsung/__DEVICE__/proprietary/bin/rilclient-test:system/bin/rilclient-test \\
     vendor/samsung/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
     vendor/samsung/__DEVICE__/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \\
