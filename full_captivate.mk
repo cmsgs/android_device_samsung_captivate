@@ -37,7 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libsec-ril.so \
     rild.libargs=-d[SPACE]/dev/ttyS0 \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+    mobiledata.interfaces=pdp0,eth0
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
